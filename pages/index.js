@@ -68,8 +68,8 @@ export default function PaginaInicial() {
       <Box
         styleSheet={{
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          backgroundColor: appConfig.theme.colors.primary[500],
-          backgroundImage: 'url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)',
+          //backgroundColor: appConfig.theme.colors.primary[500],
+          backgroundImage: 'url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8f4523ca-011e-47c2-bab5-412d4885b777/d7xwbi9-10542168-036f-439c-b3e1-6aee8a2010d3.jpg/v1/fill/w_894,h_894,q_70,strp/the_palantir_of_barad_dur_by_stirzocular_d7xwbi9-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcLzhmNDUyM2NhLTAxMWUtNDdjMi1iYWI1LTQxMmQ0ODg1Yjc3N1wvZDd4d2JpOS0xMDU0MjE2OC0wMzZmLTQzOWMtYjNlMS02YWVlOGEyMDEwZDMuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.lR5V2JvToY_spAAwdbOAJAjRmyNSQKM_a--IMTFqkdw)',
           backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
         }}
       >
@@ -82,7 +82,8 @@ export default function PaginaInicial() {
               xs: 'column',
               sm: 'row',
             },
-            width: '100%', maxWidth: '700px',
+            width: '50%', maxWidth: '558px',
+            height: '40%', maxheight: '100px',
             borderRadius: '5px', padding: '32px', margin: '16px',
             boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
             backgroundColor: appConfig.theme.colors.neutrals[700],
@@ -133,14 +134,14 @@ export default function PaginaInicial() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              maxWidth: '200px',
+              maxWidth: '160px',
               padding: '16px',
               backgroundColor: appConfig.theme.colors.neutrals[800],
               border: '1px solid',
               borderColor: appConfig.theme.colors.neutrals[999],
               borderRadius: '10px',
               flex: 1,
-              minHeight: '240px',
+              minHeight: '200px',
             }}
           >
             <Image
