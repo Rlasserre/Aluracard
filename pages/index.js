@@ -1,4 +1,5 @@
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
+import React from 'react';
 import appConfig from '../config.json';
 
 function GlobalStyle() {
@@ -59,8 +60,9 @@ function HomePage() {
  }
  export default HomePage */
 
-export default function PaginaInicial() {
-  const username = 'peas';
+export default function PageMain() {
+  //const username = 'Rlasserre';
+  const [username, setUsername] = React.useState('');
 
   return (
     <>
@@ -82,7 +84,7 @@ export default function PaginaInicial() {
               xs: 'column',
               sm: 'row',
             },
-            width: '50%', maxWidth: '558px',
+            width: '70%', maxWidth: '620px',
             height: '40%', maxheight: '100px',
             borderRadius: '5px', padding: '32px', margin: '16px',
             boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
@@ -97,12 +99,25 @@ export default function PaginaInicial() {
               width: { xs: '100%', sm: '50%' }, textAlign: 'center', marginBottom: '32px',
             }}
           >
-            <Title tag="h2">Boas vindas de volta!</Title>
+            <Title tag="h2">Bem-vindo ao Palantir!</Title>
             <Text variant="body3" styleSheet={{ marginBottom: '32px', color: appConfig.theme.colors.neutrals[300] }}>
               {appConfig.name}
             </Text>
 
-            <TextField
+            <input
+              type="text"
+              value={username}
+              onChange={function (event) {
+                console.log('usuario digitou', event.target.value);
+                //onde está o valor?
+                const valor = event.target.value;
+                //Trocar o valor da variavel.
+                //através do React e avise quem precisa.
+                setUsername(valor);
+
+              }}
+            />
+            {/*  <TextField
               fullWidth
               textFieldColors={{
                 neutral: {
@@ -112,7 +127,7 @@ export default function PaginaInicial() {
                   backgroundColor: appConfig.theme.colors.neutrals[800],
                 },
               }}
-            />
+            /> */}
             <Button
               type='submit'
               label='Entrar'
